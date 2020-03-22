@@ -27,8 +27,5 @@ if __name__ == '__main__':
     shouldUseDump = True
     tm = TopicModeller(shouldUseDump)
     td = TopicDiscoverer()
-    #artifacts = pd.read_csv('./complete_data.csv')
-    #vs = tm.CSV2Topics(artifacts)
-    #print(json.dumps(td.discover(vs)))
     app.run(debug=True)
     
