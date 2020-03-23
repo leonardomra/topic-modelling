@@ -11,14 +11,16 @@ The API offers two endpoints, namely:
 [{"title": "Suggested Topic", "terms": ["cell", "epithelial", "type", "epithelium", "airway", "human", "tissue", "cf", "ifn", "expression"]}, {"title": "Suggested Topic", "terms": ["patient", "hospital", "study", "group", "icu", "care", "\u00b1", "result", "day", "ed"]},...]
 ```
 
----
-
 * **`POST` /count**
 * **Data param:** `file: dataset.csv`
 * **Example of success response:** 
 ```javascript
 {"count": {"analysis": 81773, "case": 83358, "include": 84623, "group": 85330, "human": 85863, "gene": 92091, ...}}
 ```
+
+---
+
+When running for the first time, it will be necessary to train the model. This can take quite some time. Because of the, the model can be stored and later on retrived, therefore avoiding retraining. For training set `shouldUseDump` to `False` in `topicmodeller.py` (this will be fixed later on).
 
 ---
 
